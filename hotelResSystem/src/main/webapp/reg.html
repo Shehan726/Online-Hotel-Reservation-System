@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Hotel Reservation User Registration</title>
+
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f4f4f4;
+			margin: 0;
+			padding: 0;
+		}
+
+		h1 {
+			text-align: center;
+			color: #333;
+		}
+
+		form {
+			max-width: 400px;
+			margin: 0 auto;
+			background: #fff;
+			padding: 20px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+
+		label {
+			font-weight: bold;
+		}
+
+		input[type="text"],
+		input[type="email"],
+		input[type="password"],
+		input[type="tel"],
+		input[type="date"],
+		select {
+			width: 100%;
+			padding: 10px;
+			margin: 5px 0;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+		}
+
+		input[type="checkbox"] {
+			margin-left: 5px;
+		}
+
+		input[type="submit"] {
+			background: #333;
+			color: #fff;
+			padding: 10px 15px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+
+		input[type="submit"]:hover {
+			background: #555;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<h1>User Registration</h1>
+	<form onsubmit="return checkpassword()" action="RegSaveServlet" method="post">
+		<label for="First_name">First_name:</label>
+		<input type="text" id="firstname" name="fristname" required><br><br>
+
+		<label for="Last_name">Last_name:</label>
+		<input type="text" id="lastname" name="lastname" required><br><br>
+
+		<label for="NIC">NIC:</label>
+		<input type="text" id="nic" name="nic" required><br><br>
+
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required><br><br>
+
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password" required><br><br>
+
+		<label for="confirm_password">Confirm Password:</label>
+		<input type="password" id="repassword" name="repassword" required><br><br>
+
+		<label for="phone">Phone Number:</label>
+		<input type="tel" id="phone" name="phone" required><br><br>
+
+		<label for="birthdate">Date of Birth:</label>
+		<input type="date" id="dob" name="dob" required><br><br>
+
+		<label for="country">Country:</label>
+		<select id="country" name="country">
+			<option value="usa">United States</option>
+			<option value="canada">Canada</option>
+			<option value="uk">United Kingdom</option>
+			<!-- Add more options as needed -->
+		</select><br><br>
+
+		<label for="newsletter">Subscribe to Newsletter:</label>
+		<input type="checkbox" id="newsletter" name="newsletter"><br><br>
+
+		<input type="submit" value="Register">
+	</form>
+	<script>
+		alert("continue to register");
+		function checkpassword() {
+			var pw1 = document.getElementById('password').value;
+			var pw1 = document.getElementById('repassword').value;
+
+			if (pw1 != pw2) {
+				alert("password mismatcj");
+				return false;
+			} else {
+				alert("password match");
+				return true
+			}
+
+		}
+	</script>
+
+</body>
+
+</html>

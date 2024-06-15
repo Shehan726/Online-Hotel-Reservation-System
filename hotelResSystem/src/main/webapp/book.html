@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hotel Reservation</title>
+	<link rel="stylesheet" type="text/css" href="style/book.css">
+
+</head>
+<h3>Feedback Form</h3>
+
+<body>
+	<header>
+		<div class="navbar">
+			<div class="logo">
+				<!--<img src="images/ck.jpg" alt="Logo">-->
+			</div>
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<li><a href="book.html">Booking</a></li>
+				<li><a href="feedback.html">Feedback</a></li>
+				<li><a href="payment.html">Payment</a></li>
+				<li><a href="about.html">About Us</a></li>
+			</ul>
+		</div>
+	</header>
+	<br>
+	<div class="container">
+		<form action="BookSaveServlet" method="post">
+
+			<label for="checkin">Name:</label><br>
+			<input type="text" id="Fname" name="Fname" placeholder="Frist name" required>
+			<input type="text" id="Lname" name="Lname" placeholder="Last name" required>
+
+			<label for="checkin">Address:</address></label><br>
+			<input type="text" id="address" name="address" placeholder="Address" required><br>
+
+			<input type="text" id="city" name="city" placeholder="City" required>
+
+			<input type="text" id="state" name="state" placeholder="State" required>
+
+			<!--validate the postal code using pattern-->
+			<input type="text" pattern="[0-9]{5}" id="postalcode" name="postalcode" placeholder="Postalcode" required>
+
+			<input type="text" id="country" name="country" placeholder="country" required>
+
+			<input type="text" id="email" name="email" placeholder="Email" required>
+
+			<!--validate the pohne number using the pattern-->
+			<input type="text" pattern="[07][0-9]{9}" id=" phone" name="phone" placeholder="Phone" required>
+
+			<label for="checkin">Check-in Date:</label>
+			<input type="date" id="checkin" name="checkin" placeholder="Select check-in date" required>
+
+			<label for="checkout">Check-out Date:</label>
+			<input type="date" id="checkout" name="checkout" placeholder="Select check-out date" required>
+
+			<label for="children">Number of persons:</label>
+			<input type="number" id="person" name="person" min="0" required>
+
+			<label for="roomtype">Room Type:</label>
+			<select id="roomtype" name="roomtype" required>
+				<option value="single">Single</option>
+				<option value="double">Double</option>
+				<option value="suite">Suite</option>
+			</select>
+
+			<button type="submit" class="btn1">Book Now</button>
+			<a href="BookViewServlet" class="btn2">View Books</a>
+		</form>
+	</div>
+</body>
+
+</html>

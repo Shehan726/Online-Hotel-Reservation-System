@@ -1,0 +1,61 @@
+<html>
+
+<head>
+	<title>Feedback</title>
+	<link rel="stylesheet" type="text/css" href="style/feedback.css">
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</head>
+
+<body>
+	<header>
+		<div class="navbar">
+			<div class="logo">
+				<!--<img src="images/ck.jpg" alt="Logo">-->
+			</div>
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<li><a href="book.html">Booking</a></li>
+				<li><a href="contactus.html">Feedback</a></li>
+				<li><a href="payment.html">Payment</a></li>
+				<li><a href="about.html">About Us</a></li>
+			</ul>
+		</div>
+	</header>
+	<br><br>
+	<h3>Feedback Form</h3>
+	<div class="contact-box">
+		<form action="FeedSaveServlet" method="POST">
+
+			<input type="text" class="input-field" placeholder="name" name="name">
+			<input type="email" class="input-field" placeholder="email" name="email">
+			<input type="text" class="input-field" placeholder="phonenumber" name="phonenumber">
+			<textarea type="text" class="input-field textarea-field" placeholder="message" name="message">
+
+            </textarea>
+
+			<button type="submit" class="btn" value="click"
+				onclick="alert('Thank you for your Feedback');">Submit</button>
+		</form>
+		<a href="FeedViewServlet">view</a>
+	</div>
+
+	<footer>
+		<!--<image style="float:left" src="images/logo.png" width="7%">-->
+		<h5 style="color:white">BakingDaddy <br>16/9 Meta Road,Colombo06</h5>
+
+
+		<ul class="footerIcons">
+			<li><a href="https://www.facebook.com/"><ion-icon name="logo-facebook"></ion-icon></li></a>
+			<li><a href="https://www.instagram.com/"><ion-icon name="logo-instagram"></ion-icon></li></a>
+			<li><a href="https://twitter.com/"><ion-icon name="logo-twitter"></ion-icon></li></a>
+		</ul>
+
+		<ul class="footerMenu">
+			<li class="footerNav"><a href="contactus.html">Contact us</a></li>
+			<li class="footerNav"><a href="terms & conditions">Terms & conditions</a></li>
+			<li class="footerNav"><a href="feedback.html">Feedback</a></li>
+		</ul>
+	</footer>
+</body>
+
+</html>

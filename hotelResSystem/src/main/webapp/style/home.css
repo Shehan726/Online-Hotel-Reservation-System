@@ -1,0 +1,217 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "poppins", sans-serif;
+}
+
+.container {
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+		url("image.jpg");
+	background-size: cover;
+	background-position: center;
+	padding: 0 8%;
+	position: relative;
+}
+
+nav {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 5px 0;
+}
+
+.logo {
+	width: 120px;
+	cursor: pointer;
+	border-radius: 50%;
+}
+
+nav ul {
+	flex: 1;
+	text-align: right;
+	padding-right: 5px;
+}
+
+nav ul li {
+	display: inline-block;
+	list-style: none;
+	margin: 10px 30px;
+}
+
+nav ul li a {
+	color: snow;
+	text-decoration: none;
+	position: relative;
+}
+
+nav ul li a::after {
+	content: "";
+	width: 0;
+	height: 3px;
+	position: absolute;
+	bottom: -5px;
+	left: 50%;
+	transform: translateX(-50%);
+	background: white;
+	transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+	width: 50%;
+}
+
+.text-box {
+	color: rgb(206, 208, 209);
+	position: absolute;
+	bottom: 8%;
+}
+
+.text-box h1 {
+	font-size: 130px;
+	line-height: 170px;
+	margin-left: -10px;
+	color: transparent;
+	-webkit-text-stroke: 1px white;
+	background: url(../images/thn.jpg);
+	-webkit-background-clip: text;
+}
+
+.button {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 30px;
+	display: inline-block;
+	border-radius: 4px;
+	background-color: white;
+	border: none;
+	color: lightseagreen;
+	text-align: center;
+	font-size: 28px;
+	padding: 10px;
+	width: 200px;
+	transition: all 0.5s;
+	cursor: pointer;
+	margin: 4px;
+}
+
+.button span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+.button span:after {
+	content: "\00bb";
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+
+.button:hover span {
+	padding-right: 25px;
+}
+
+.button:hover span:after {
+	opacity: 1;
+	right: 0;
+}
+
+.term {
+	color: rgb(206, 208, 209);
+	position: absolute;
+	align-items: center;
+}
+
+.term h2 {
+	font-size: 40px;
+	line-height: 170px;
+	margin-left: -10px;
+	color: whitesmoke;
+}
+
+.adress {
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	padding-top: 100px;
+}
+
+h1 {
+	color: darkcyan;
+	font-size: 50px;
+	font-weight: 600px;
+}
+
+p {
+	color: rgb(3, 5, 7);
+	font-weight: 700px;
+}
+
+.mine {
+	margin-top: 5%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.mine-t {
+	flex-basis: 31%;
+
+	background: url(../images/ima.jpg);
+	border-radius: 15px;
+	margin-bottom: 5%;
+	padding: 20px 12px;
+	box-sizing: border-box;
+}
+
+h3 {
+	text-align: center;
+	font-weight: 600;
+	margin: 10px 0;
+}
+
+.mine-t:hover {
+	box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.globe {
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	padding-top: 50px;
+}
+
+.mine-col {
+	flex-basis: 32%;
+	border-radius: 10px;
+	margin-bottom: 30px;
+	position: relative;
+	overflow: hidden;
+}
+
+.mine-col img {
+	width: 100%;
+}
+
+.footer {
+	width: 100%;
+	text-align: center;
+	padding: 30px 0;
+}
+
+.footer h4 {
+	margin-bottom: 25px;
+	margin-top: 20px;
+	font-weight: 600;
+}
+
+.term-t {
+	text-align: left;
+}
